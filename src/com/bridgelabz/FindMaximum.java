@@ -1,20 +1,26 @@
 package com.bridgelabz;
 
-public class FindMaximum {
+// Refactor2 --> Refactor to create Generic Class to take in 3 variables of Generic Type
 
-	// UC4--> Refactor- all 3 to one generic method and find the maximum
-	<T extends Comparable<T>> T maximum(T X, T Y, T Z) {
+public class FindMaximum<T extends Comparable<T>> {
 
-		T max = X;
-		if (Y.compareTo(max) > 0) {
-			max = Y;
-		}
-		if (Z.compareTo(max) > 0) {
-			max = Z;
-		}
-		System.out.println("Values are : " + X +" "+ Y +" "+ Z);
-		System.out.println("The Max of 3 Values : " + max);
-		return max;
+	T X, Y, Z;
+
+	public FindMaximum(T X, T Y, T Z) {
+		this.X = X;
+		this.Y = Y;
+		this.Z = Z;
 	}
+	public void testMaximum() {
+		testMaximum(X, Y, Z);
+	}
+	static <T extends Comparable<T>> void testMaximum(T X, T Y, T Z) {
+		if ((X.compareTo(Y)) >= 0 && (X.compareTo(Z)) >= 0)
+			System.out.println(X + " is the largest");
+		else if ((Y.compareTo(X)) >= 0 && (Y.compareTo(Z)) >= 0)
+			System.out.println(Y + " is the largest");
+		else
+			System.out.println(Z + " is the largest");
 
+	}
 }
