@@ -2,6 +2,8 @@ package com.bridgelabz;
 
 public class FindMaximumMain {
 	public static void main(String[] args) {
-		System.out.println("Welcome to generics program");
+		FindMaximum maximum = new FindMaximum();
+		System.out.println("Maximumn in given integers is :");
+		maximum.checkMaximum(99999, 99, 999);
 	}
 }
