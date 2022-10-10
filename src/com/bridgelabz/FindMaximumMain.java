@@ -1,15 +1,14 @@
 package com.bridgelabz;
 
 public class FindMaximumMain {
+
 	public static void main(String[] args) {
-		FindMaximum maximum = new FindMaximum();
-		System.out.println("Maximumn in given Integerr is :");
-		maximum.maximum(99, 99999, 999);
-		System.out.println();
-		System.out.println("Maximumn in given floats is :");
-		maximum.maximum(1.1, 2.2, 3.3);
-		System.out.println();
-		System.out.println("Maximumn in given Strings is :");
-		maximum.maximum("Apple", "Peach", "Banana");
+		FindMaximum<Integer> fm = new FindMaximum<Integer>(9, 99, 66);
+		fm.testMaximum();
+		FindMaximum<Float> fm1 = new FindMaximum<Float>(0.1f, 2.2f, 9.9f);
+		fm1.testMaximum();
+		FindMaximum<String> fm2 = new FindMaximum<String>("apple", "lychee", "grapes");
+		fm2.testMaximum();
 	}
+
 }
